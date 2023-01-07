@@ -1,0 +1,51 @@
+{
+	"name": "M5 734M5 Chat Export",
+	"author": "Gildas Lormeau",
+	"homepage_url": "https://github.com/gildas-lormeau/single-file-export-chat",
+	"version": "1.0.0",
+	"description": "Save complete chat discussions",
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"run_at": "document_start",
+			"js": [
+				"lib/chrome-browser-polyfill.js",
+				"lib/single-file-frames.js",
+				"lib/single-file-extension-frames.js"
+			],
+			"all_frames": true,
+			"match_about_blank": true
+		},
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"run_at": "document_start",
+			"js": [
+				"lib/chrome-browser-polyfill.js",
+				"lib/single-file-bootstrap.js"
+			]
+		}
+	],
+	"browser_action": {
+		"default_title": "Export Chat"
+	},
+	"background": {
+		"page": "src/core/bg/background.html",
+		"persistent": false
+	},
+	"web_accessible_resources": [
+		"lib/single-file-hooks-frames.js",
+		"lib/single-file-infobar.js"
+	],
+	"permissions": [
+		"downloads",
+		"storage",
+		"tabs",
+		"<all_urls>"
+	],
+	"incognito": "spanning",
+	"manifest_version": 2
+}
