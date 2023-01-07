@@ -3,7 +3,7 @@
 	"author": "Gildas Lormeau",
 	"homepage_url": "https://github.com/gildas-lormeau/single-file-export-chat",
 	"version": "1.0.0",
-	"description": "Save complete chat discussions",
+	"description": "Save complete chat in MS Teams",
 	"content_scripts": [
 		{
 			"matches": [
@@ -30,7 +30,7 @@
 		}
 	],
 	"browser_action": {
-		"default_title": "Export Chat"
+		"default_title": "Save Chat"
 	},
 	"background": {
 		"page": "src/core/bg/background.html",
