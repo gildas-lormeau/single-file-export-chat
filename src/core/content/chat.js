@@ -20,7 +20,7 @@ globalThis.exportChat = (() => {
                         content: "<!DOCTYPE html> " + doc.documentElement.outerHTML
                     });
                 } finally {
-                    resizeFrameSize(frameDoc);
+                    resetFrameSize(frameDoc);
                     extension.processing = false;
                 }
             }
@@ -32,7 +32,7 @@ globalThis.exportChat = (() => {
         frameDoc.body.style.setProperty("height", MAX_HEIGHT);
     }
 
-    function resizeFrameSize(frameDoc) {
+    function resetFrameSize(frameDoc) {
         frameDoc.body.style.removeProperty("height");
     }
 
