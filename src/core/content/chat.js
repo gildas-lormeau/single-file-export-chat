@@ -37,7 +37,7 @@ globalThis.exportChat = (() => {
     }
 
     function waitSubTreeLoaded(target) {
-        const WAIT_DELAY = 1000;
+        const WAIT_DELAY = 3000;
         let timeoutResolve;
         return new Promise(resolve => {
             const observer = new MutationObserver(() => {
