@@ -6,4 +6,4 @@ Instructions:
 2. Unzip it somewhere
 3. Install it manually in your browser as an unpackaged extension
 4. Open a chat in Teams
-5. Click on the button to save the chat
+5. Click on the button (and wait a little bit) to save the chat
