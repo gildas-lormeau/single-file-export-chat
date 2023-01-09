@@ -1,8 +1,6 @@
-(() => {
+globalThis.exportChat = (() => {
 
-    exportChat();
-
-    async function exportChat() {
+    return async function() {
         const frameDoc = frames[0].document;
         const chatContentElement = frameDoc.querySelector(".ui-box.ap");
         if (chatContentElement && !extension.processing) {
@@ -15,9 +13,8 @@
                     await waitSubTreeLoaded(listElement);
                     const { content, filename } = await extension.getPageData(SINGLE_FILE_OPTIONS);
                     const doc = getFrameDocument(content);
-                    resetChatContentZoom(doc);
-                    moveChatContentToTheTop(doc);
-                    debugger;
+                    resetOverflow(doc);
+                    moveChatContent(doc);
                     download({
                         filename,
                         content: "<!DOCTYPE html> " + doc.documentElement.outerHTML
@@ -57,7 +54,7 @@
         });
     }
 
-    function resetChatContentZoom(doc) {
+    function resetOverflow(doc) {
         doc.documentElement.style.setProperty("position", "static");
         const docBodyStyle = doc.body.style;
         docBodyStyle.setProperty("height", "auto");
@@ -69,7 +66,7 @@
         return new DOMParser().parseFromString(doc.querySelector("iframe").srcdoc, "text/html");
     }
 
-    function moveChatContentToTheTop(doc) {
+    function moveChatContent(doc) {
         const chatContent = doc.querySelector("ul");
         doc.body.innerHTML = "";
         doc.body.appendChild(chatContent);

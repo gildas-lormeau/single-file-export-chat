@@ -27,6 +27,19 @@
 				"lib/chrome-browser-polyfill.js",
 				"lib/single-file-bootstrap.js"
 			]
+		},
+		{
+			"matches": [
+				"*://teams.microsoft.com/*"
+			],
+			"run_at": "document_start",
+			"js": [
+				"/lib/single-file-extension-core.js",
+				"/lib/single-file.js",
+				"/src/core/content/options.js",
+				"/src/core/content/util.js",
+				"/src/core/content/chat.js"
+			]
 		}
 	],
 	"browser_action": {
