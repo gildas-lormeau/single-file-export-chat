@@ -38,7 +38,8 @@
 				"/lib/single-file.js",
 				"/src/core/content/options.js",
 				"/src/core/content/util.js",
-				"/src/core/content/chat.js"
+				"/src/core/content/chat.js",
+				"/src/core/content/conversation.js"
 			]
 		}
 	],
