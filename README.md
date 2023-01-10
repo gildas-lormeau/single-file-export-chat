@@ -1,5 +1,5 @@
 # single-file-export-chat
-Extension to export MS Teams chats
+Extension to export MS Teams chats and conversations
 
 Instructions:
 1. Download the extension here: https://github.com/gildas-lormeau/single-file-export-chat/blob/main/singlefile-extension.zip
