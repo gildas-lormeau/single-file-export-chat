@@ -11,5 +11,5 @@ Instructions:
      https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading
    - Firefox:
      https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
-4. Open a chat in Teams
+4. Open a chat or a conversation
 5. Click on the button (and wait a little bit) to save the chat
